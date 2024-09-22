@@ -31,10 +31,13 @@ int fibonacci(int n) {
     
     if (n == 0) {
         // Base case: Fibonacci of 0 is 0, and Fibonacci of 1 is 1
+        return 0;
     } else if (n == 1) {
         // Special Case
+        return 1;
     } else {
         // Recursive case:
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 
@@ -42,10 +45,11 @@ int fibonacci(int n) {
 int arraySum(int arr[], int size) {
     
     if (size == 0) {
-        // Base case: 
+        // Base case:
+        return 0;
     } else {
-        // Recursive case: 
-
+        // Recursive case:
+        return arr[size - 1] + arraySum(arr, size - 1);
     }
 }
 
