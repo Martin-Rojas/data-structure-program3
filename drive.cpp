@@ -17,11 +17,12 @@ void printReverse(int arr[], int size) {
     
     if (size == 0) {
         // Base case: if the array is empty, return
+        std::cout << "";
     } else {
         // Print the last element
-
+        std::cout << arr[size - 1] << " ";
         // Recursive case: print the remaining elements in reverse order
-
+        printReverse(arr, size - 1);
     }
 }
 
