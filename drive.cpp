@@ -1,4 +1,13 @@
 #include <iostream>
+#include <string>
+
+/**
+Programmer: Martin Rojas
+Project number: 3
+Project Desc: Solving problems using recursion.
+Course: COSC 2436 PF III Data Structures
+Date:   09/22/2024
+*/
 
 // Function to calculate the factorial of a number using recursion
 int factorial(int n) {
@@ -58,10 +67,10 @@ int power(int base, int exponent) {
     
     if (exponent == 0) {
         // Base case:
-
+        return 1;
     } else {
-        // Recursive case: 
-
+        // Recursive case:
+        return base * power(base, exponent - 1);
     }
 }
 
@@ -70,11 +79,12 @@ void reverseString(std::string& str, int start, int end) {
     
     if (start >= end) {
         // Base case:
+        return;
     } else {
         // Swap characters at start and end indices
-
+        std::swap(str[start], str[end]);
         // Recursive case:
-        
+        reverseString(str, start + 1, end - 1);
     }
 }
 
